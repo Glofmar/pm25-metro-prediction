@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pm25-metro-prediction"
+version = "0.1.0"
+description = "Predicting PM2.5 concentrations in metro stations, using Seoul open data"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "scikit-learn>=1.4",
+    "joblib",
+    "folium>=0.17",
+    "matplotlib>=3.9",
+]
+
+[tool.setuptools]
+packages = ["pm25"]

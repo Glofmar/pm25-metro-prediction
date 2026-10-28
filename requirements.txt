@@ -1,0 +1,3 @@
+# Installs the pm25 package (dependencies in pyproject.toml) and Jupyter for the notebook
+-e .
+jupyter
