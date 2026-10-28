@@ -8,7 +8,7 @@ Fine particles (PM2.5) are often much more concentrated underground than in the 
 
 ## Background
 
-The code was developed for a project on PM2.5 in the Paris metro. The question was whether measurements made with a portable sensor, combined with what is known about each station (depth, number of lines and exits, platform layout and so on), could give an estimate of PM2.5 levels across the whole network, including the stations we never visited.
+The code was developed for a project on PM2.5 in the Paris metro. The question was whether measurements made with a portable sensor, combined with what is known about each station (depth, number of lines and exits, platform layout and so on), could give an estimate of PM2.5 levels across the whole network, including the stations that were never visited.
 
 This repository runs the same code on open data from the Seoul metro (lines 1 to 8), where Seoul Metro publishes hourly readings from monitors installed in its stations, so that anyone can run it. Nothing in the code is specific to Seoul: any network can be used as long as it provides the same two files, a list of PM2.5 measurements and a table of station characteristics.
 
@@ -54,7 +54,7 @@ models/    the trained model
 docs/      methodology, results and map
 ```
 
-## Data and acknowledgements
+## Data
 
 The data comes from Seoul Metro (서울교통공사) through the [Seoul Open Data Plaza](https://data.seoul.go.kr). It is used under the [Korea Open Government License type 1](https://www.kogl.or.kr/info/licenseType1.do) and was modified for this project (filtered, aggregated and renamed); [data/README.md](data/README.md) lists the datasets and the changes.
 
@@ -62,4 +62,4 @@ Parts of the code and documentation were written with the help of an AI coding a
 
 ## Licence
 
-The code is under the [MIT License](LICENSE). The data in `data/` is not: it comes from Seoul Metro under the Korea Open Government License type 1.
+The code is under the [MIT License](LICENSE). The data in `data/` is not covered by this licence: it comes from Seoul Metro under the Korea Open Government License type 1.
