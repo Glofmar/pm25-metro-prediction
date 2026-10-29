@@ -8,13 +8,14 @@ Fine particles (PM2.5) are often much more concentrated underground than in the 
 
 ## Background
 
-The code was developed for a project on PM2.5 in the Paris metro. The question was whether measurements made with a portable sensor, combined with what is known about each station (depth, number of lines and exits, platform layout and so on), could give an estimate of PM2.5 levels across the whole network, including the stations that were never visited.
+The code was developed for a project on PM2.5 in the Paris metro. The question was whether measurements made with a portable sensor, combined with what is known about each station (depth, number of lines and exits, platform layout, and so on), could give an estimate of PM2.5 levels across the whole network, including the stations that were never visited.
 
 This repository runs the same code on open data from the Seoul metro (lines 1 to 8), where Seoul Metro publishes hourly readings from monitors installed in its stations, so that anyone can run it. Nothing in the code is specific to Seoul: any network can be used as long as it provides the same two files, a list of PM2.5 measurements and a table of station characteristics.
 
 ## Results
 
-The model is a random forest that uses the characteristics of the station, its line and the hour. The Seoul monitors measure every station at every hour, which no field campaign does, so we report results for simulated campaigns in which only some stations are visited, a few times each. With half of the stations visited three times (about 380 measurements), the model is off by 6.1 µg/m³ on average at the hours that were not measured in visited stations, and by 10.2 µg/m³ in stations that were never visited. Always predicting the mean of the measurements would give 13.7 µg/m³.
+The model is a random forest that uses the characteristics of the station, its line and the hour. The Seoul monitors measure every station at every hour, which no field campaign does, so we report results for simulated campaigns in which only some stations are visited, a few times each. With half of the stations visited three times (about 380 measurements), the model is off by 6.1 µg/m³ on average at the hours that were not measured in visited stations, and by 10.2 µg/m³ in stations that were never visited. Always predicting the mean of the measurements would give 13.7 µg/m³. For reference, the measured levels average 34 µg/m³ (from 9 to 224).
+
 
 For stations that were never visited, measuring more stations helps much more than going back to the same ones. See [docs/results.md](docs/results.md) for the details and [docs/methodology.md](docs/methodology.md) for how the model is evaluated.
 
